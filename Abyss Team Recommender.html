@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendación de Equipos - Genshin Impact</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Recomendación de Equipos - Genshin Impact</h1>
+    </header>
+    <div class="container">
+        <!-- Sección de Equipo Recomendado -->
+        <section id="recommended-team">
+            <div class="section-header">
+                <h2>Equipo Recomendado</h2>
+            </div>
+            <div class="character-container">
+                <div class="character" id="dps-slot" onclick="changeCharacter('DPS')" role="button" tabindex="0" aria-label="Change DPS character">
+                    <img src="" alt="Avatar" class="avatar">
+                    <img src="" alt="Element Icon" class="element-icon">
+                    <div class="name">DPS</div>
+                    <div class="role">Role</div>
+                    <div class="score">Score</div>
+                </div>
+                <div class="character" id="sub-dps-slot" onclick="changeCharacter('Sub DPS')" role="button" tabindex="0" aria-label="Change Sub DPS character">
+                    <img src="" alt="Avatar" class="avatar">
+                    <img src="" alt="Element Icon" class="element-icon">
+                    <div class="name">Sub DPS</div>
+                    <div class="role">Role</div>
+                    <div class="score">Score</div>
+                </div>
+                <div class="character" id="flex-slot" onclick="changeCharacter('Flex')" role="button" tabindex="0" aria-label="Change Flex character">
+                    <img src="" alt="Avatar" class="avatar">
+                    <img src="" alt="Element Icon" class="element-icon">
+                    <div class="name">Flex</div>
+                    <div class="role">Role</div>
+                    <div class="score">Score</div>
+                </div>
+                <div class="character" id="healer-shielder-slot" onclick="changeCharacter('Healer/Shielder')" role="button" tabindex="0" aria-label="Change Healer/Shielder character">
+                    <img src="" alt="Avatar" class="avatar">
+                    <img src="" alt="Element Icon" class="element-icon">
+                    <div class="name">Healer/Shielder</div>
+                    <div class="role">Role</div>
+                    <div class="score">Score</div>
+                </div>
+            </div>
+            <div class="switch">
+                <input type="checkbox" id="include-5-star" checked>
+                <label for="include-5-star">
+                    <span>Solo 4 estrellas</span>
+                    <span></span>
+                    <span>Incluir 5 estrellas</span>
+                </label>
+            </div>
+        </section>
+
+        <!-- Sección de Descripción del equipo -->
+        <section id="">
+            <div class="section-header">
+                <h2>Posibles reacciones</h2>
+            </div>
+            <!-- Sección de Descripción del Equipo -->
+            <div id="team-description">
+                <p id="team-description-content"></p>
+            </div>
+        </section>
+
+        <!-- Sección de Selección de Enemigos -->
+        <section id="enemy-selection">
+            <div class="section-header">
+                <h2>Selección de Enemigos</h2>
+            </div>
+            <div class="enemy-container">
+                <button class="reset-button" onclick="resetSelection()">Reiniciar Selección</button>
+                <!-- Los botones de enemigos se generarán dinámicamente -->
+            </div>
+        </section>
+
+        <!-- Sección de Características de los Enemigos -->
+        <section id="enemy-attributes">
+            <h2>Características de los Enemigos</h2>
+            
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Enemigo</th>
+                    <th>Física</th>
+                    <th>Anemo</th>
+                    <th>Geo</th>
+                    <th>Electro</th>
+                    <th>Hydro</th>
+                    <th>Pyro</th>
+                    <th>Cryo</th>
+                    <th>Dendro</th>
+                    <th>Ventaja</th>
+                    <th>Desventaja</th>
+                </tr>
+            </thead>
+            <tbody id="enemy-attributes-body">
+                <!-- Las filas se actualizarán dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+        </section>
+    </div>
+
+    <script src="characters.js"></script>
+    <script src="enemies.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
